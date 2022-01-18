@@ -4,7 +4,7 @@ class Quarkus < Formula
   homepage "https://quarkus.io"
   url "https://github.com/quarkusio/quarkus/releases/download/2.6.2.Final/quarkus-cli-2.6.2.Final.zip"
   version "2.6.2.Final"
-  sha256 "1c52755e9b26adc58f51d90cf922b8b53c33cc721e9d0ba17952adee710ec6d9"
+  sha256 "9c88b8f65c12a1382bd9fa33eb46d3bd63be384d4f1af32baa2a50cf920091be"
   license "Apache-2.0"
 
 
