@@ -1,25 +1,20 @@
+# Generated with JReleaser 0.10.0 at 2022-01-18T16:01:24.224525+01:00
 class Quarkus < Formula
   desc "CLI for Quarkus"
   homepage "https://quarkus.io"
-  version "2.0.0.CR3"
-  url "https://github.com/quarkusio/quarkus/releases/download/2.0.0.CR3/quarkus-cli-2.0.0.CR3-runner.jar", :using => :nounzip
-  sha256 "d0f9f2b103a58bf8ecf888c002a5dff53828f511b3f6fe6199e0a94865e1b4e4"
-  license "Apache-2"
-
-  bottle :unneeded
+  url "https://github.com/quarkusio/quarkus/releases/download/2.6.2.Final/quarkus-cli-2.6.2.Final.zip"
+  version "2.6.2.Final"
+  sha256 "1c52755e9b26adc58f51d90cf922b8b53c33cc721e9d0ba17952adee710ec6d9"
+  license "Apache-2.0"
 
 
   def install
-    File.open("quarkus", "w") do |f|
-      f << "#!/bin/bash\n"
-      f << "java -jar $JAVA_OPTS #{prefix}/quarkus-cli-2.0.0.CR3-runner.jar \"$@\"\n"
-    end
-    prefix.install "quarkus-cli-2.0.0.CR3-runner.jar"
-    bin.install "quarkus"
+    libexec.install Dir["*"]
+    bin.install_symlink "#{libexec}/bin/quarkus"
   end
 
   test do
     output = shell_output("#{bin}/quarkus --version")
-    assert_match "2.0.0.CR3", output
+    assert_match "2.6.2.Final", output
   end
 end
