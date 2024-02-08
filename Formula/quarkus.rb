@@ -1,10 +1,10 @@
-# Generated with JReleaser 1.3.0 at 2024-01-31T16:36:38.557557628Z
+# Generated with JReleaser 1.3.0 at 2024-02-08T15:15:55.357747317Z
 class Quarkus < Formula
   desc "CLI for Quarkus"
   homepage "https://quarkus.io"
-  url "https://github.com/quarkusio/quarkus/releases/download/3.7.1/quarkus-cli-3.7.1.zip"
-  version "3.7.1"
-  sha256 "f59af24a92aacc67c847b80d9a31fe6acb00d8c04fdf67bd5523598356e0ea0f"
+  url "https://github.com/quarkusio/quarkus/releases/download/3.7.2/quarkus-cli-3.7.2.zip"
+  version "3.7.2"
+  sha256 "0c838cdd7af526026b21a4845fd64d98c29ec54c49bb6cbcd8ab004fdaeeddad"
   license "Apache-2.0"
 
 
@@ -15,6 +15,6 @@ class Quarkus < Formula
 
   test do
     output = shell_output("#{bin}/quarkus --version")
-    assert_match "3.7.1", output
+    assert_match "3.7.2", output
   end
 end
